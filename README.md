@@ -27,4 +27,4 @@ A aplicação pode ser testada através: [Deste Link](https://cadastro-pessoas-s
 A aplicação web pode ser baixada e testada, para implementação de melhorias ou fins educacionais através: [Deste Link](https://downgit.github.io/#/home?url=https://github.com/carlossant77/cadastro-pessoas/tree/main)
 
 # Comentários do Autor 📚
-Determinadas conexões de rede podem apresentar problemas de navegação na aplicação (como redes escolares). É recomemdado utilizar conexão de rede própria.
+Determinadas conexões de rede podem apresentar problemas de navegação na aplicação (como redes escolares). É recomendado utilizar conexão de rede própria.
