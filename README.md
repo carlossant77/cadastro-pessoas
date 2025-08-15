@@ -24,4 +24,7 @@ Este repositório contém uma aplicação web de cadastro e consulta de clientes
 A aplicação pode ser testada através: [Deste Link](https://cadastro-pessoas-santiago.onrender.com)
 
 # Link de Download 💾
-A aplicação web pode ser baixada e testada, para implementação de melhorias ou fins educacionais através: [Deste Link]()
+A aplicação web pode ser baixada e testada, para implementação de melhorias ou fins educacionais através: [Deste Link](https://downgit.github.io/#/home?url=https://github.com/carlossant77/cadastro-pessoas/tree/main)
+
+# Comentários do Autor 📚
+Determinadas conexões de rede podem apresentar problemas de navegação na aplicação (como redes escolares). É recomemdado utilizar conexão de rede própria.
