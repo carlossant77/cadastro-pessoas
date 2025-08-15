@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Fornecedor</title>
+    <link rel="stylesheet" href="/static/styles/estiloEditar.css">
+</head>
+<body>
+    <nav>
+        <div class="navegacao">
+            <ul>
+                <li><a href="/inicio">Inicio</a></li>
+                <li><a href="/fornecedor">Cadastro</a></li>
+                <li><a href="/consulta_fornecedor">Consulta</a></li>
+            </ul>
+        </div>
+
+        <h1>Editar Fornecedor</h1>
+
+        <div class="perfil">
+            <div class="foto_de_perfil" tabindex="0">
+                <img src="/static/assets/{{ foto_perfil }}" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>{{ nome_usuario }}</li>
+                    <li><a href="/logout">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="formulario">
+        <form method="POST" action="/editar_fornecedor/{{ fornecedor[0] }}">
+            <div class="informacoes">
+                <div>
+                    <label for="nomef">nome</label>
+                    <input type="text" name="nomef" id="nomef" placeholder="Nome" value="{{ fornecedor[1] }}">
+                </div>
+                <div>
+                    <label for="emailf">email</label>
+                    <input type="email" name="emailf" id="emailf" placeholder="Email" value="{{ fornecedor[2] }}">
+                </div>
+                <div>
+                    <label for="telefonef">telefone</label>
+                    <input type="text" name="telefonef" id="telefonef" placeholder="Telefone" value="{{ fornecedor[3] }}">
+                </div>
+                <div>
+                    <label for="site">site</label>
+                    <input type="text" name="site" id="site" placeholder="Site" value="{{ fornecedor[4] }}">
+                </div>
+                <div>
+                    <label for="cnpj">cnpj</label>
+                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ" value="{{ fornecedor[5] }}">
+                </div>
+                <div>
+                    <label for="ruaf">rua</label>
+                    <input type="text" name="ruaf" id="ruaf" placeholder="Rua" value="{{ fornecedor[7] }}">
+                </div>
+                <div>
+                    <label for="numerof">numero</label>
+                    <input type="text" name="numerof" id="numerof" placeholder="Número" value="{{ fornecedor[8] }}">
+                </div>
+                <div>
+                    <label for="cidadef">cidade</label>
+                    <input type="text" name="cidadef" id="cidadef" placeholder="Cidade" value="{{ fornecedor[9] }}">
+                </div>
+                <div>
+                    <label for="estadof">estado</label>
+                    <input type="text" name="estadof" id="estadof" placeholder="Estado" value="{{ fornecedor[10] }}">
+                </div>
+                <div>
+                    <label for="cepf">cep</label>
+                    <input type="text" name="cepf" id="cepf" placeholder="CEP" value="{{ fornecedor[11] }}">
+                </div>
+
+                <div class="botoes">
+                    <button type="submit" class="editar">Salvar Alterações</button>
+                </div>
+            </div>
+        </form>
+        
+        <form method="POST" action="/excluir_fornecedor/{{ fornecedor[0] }}">
+            <div class="botoes">
+                <button type="submit" class="excluir">Excluir Fornecedor</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

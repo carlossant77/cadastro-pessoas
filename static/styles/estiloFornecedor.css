@@ -1,0 +1,285 @@
+/* Importa a fonte Montserrat do Google Fonts com pesos de 400 e 700 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Remove a margem e o padding padrão de todos os elementos e define o box-sizing como border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define o estilo para o body */
+body {
+    height: 100vh; /* Altura total da viewport */
+    background-color: #4ec7b0; /* Cor de fundo */
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+}
+
+/* Container geral para o conteúdo da página */
+.conteudoGeral {
+    height: 100vh; /* Altura total da viewport */
+    width: 100%; /* Largura total da página */
+}
+
+/* Estilo para o cabeçalho de navegação */
+nav {
+    width: 100%; /* Largura total */
+    padding: 20px 0; /* Espaçamento interno acima e abaixo */
+    background-color: #48b5a0; /* Cor de fundo */
+    display: flex; /* Exibe como flexbox */
+    justify-content: space-between; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto */
+
+}
+
+/* Estilo para o título dentro do cabeçalho */
+nav h1 {
+    color: #fff; /* Cor do texto */
+    font-size: 4vw; /* Tamanho relativo à largura da viewport */
+    width: 33%;
+}
+
+.navegação{
+    display: flex;
+    width: 33%;
+}
+.navegacao ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+
+.navegacao li {
+    position: relative;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+.navegacao li:hover > a {
+    color: #FFD700;
+}
+
+.navegacao ul:hover li {
+    display: block;
+}
+
+.perfil{
+    margin-right: 2%;
+    width: 31%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.foto_de_perfil {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Garante que a imagem não "vaze" */
+    border-radius: 50%; /* Aplica o formato circular */
+    cursor: pointer;
+}
+
+.menu {
+    display: none; 
+    position: absolute; 
+    top: 13%; 
+    left: 91.5%;
+    max-width: 7vw;
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.menu ul {
+    text-decoration: none;  
+    list-style: none;
+}
+
+.menu ul li {
+    color: #000;
+}
+
+.perfil:focus-within .menu{
+    display: block;
+}
+
+.menu ul li a {
+    display: flex;
+    justify-self: left;
+}
+
+.foto_de_perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manteve a proporção da imagem */
+    border-radius: 50%;
+}
+
+/* Container centralizado para o conteúdo principal */
+.container {
+    height: calc(100vh - 14vh); /* Altura ajustada subtraindo a altura do cabeçalho */
+    display: flex; /* Flexbox para centralizar o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    /* Removido align-items: center para permitir o controle de altura do formulário */
+}
+
+/* Estilo para o formulário */
+.formulario {
+    width: 700px; /* Largura fixa */
+    display: flex; /* Flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 150px; /* Ajuste este valor para mover o formulário mais para baixo */
+}
+
+/* Container dos inputs */
+.input {
+    border: 2px solid black; /* Borda */
+    border-radius: 20px; /* Borda arredondada */
+    background-color: #f4f6fc; /* Cor de fundo */
+    padding: 30px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui borda e padding no tamanho total */
+    width: 100%; /* Largura total */
+    max-width: 1000px; /* Largura máxima */
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+}
+
+/* Estilo para o ícone de usuário */
+.user-icon {
+    display: flex; /* Flexbox para centralizar */
+    justify-content: flex-start;
+    margin-left: -320px;/* Centraliza o ícone */
+    margin-bottom: -75px; /* Margem inferior */
+}
+
+.user-local{
+    display: flex; /* Flexbox para centralizar */
+    justify-content: flex-start;
+    margin-left: 300px;/* Centraliza o ícone */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+/* Estilo para o conteúdo do formulário */
+.form-content {
+    display: flex; /* Flexbox para organizar em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    width: 100%; /* Largura total */
+    justify-content: space-between; /* Espaço entre os itens */
+}
+
+/* Estilos para as seções pessoais e de endereço */
+.pessoal, .endereco {
+    width: 48%; /* Largura de 48% para dividir espaço */
+    display: flex; /* Flexbox para organizar em coluna */
+    flex-direction: column; /* Alinha itens em coluna */
+    gap: 15px; /* Espaçamento entre os inputs */
+}
+
+/* Estilo para os inputs de texto */
+input[type="text"], [type="date"] {
+    width: 100%; /* Largura total */
+    padding: 12px; /* Espaçamento interno */
+    border: 3.5px solid black; /* Borda */
+    border-radius: 20px; /* Borda arredondada */
+    font-size: 1em; /* Tamanho da fonte */
+    color: black; /* Cor do texto */
+    background-color: #fff; /* Cor de fundo */
+}
+
+/* Estilo para o texto placeholder dos inputs */
+input[type="text"]::placeholder {
+    color: #999; /* Cor do placeholder */
+}
+
+/* Estilo para o grupo de CEP */
+.cep-group {
+    display: flex; /* Flexbox para alinhar o campo e o botão */
+    gap: 10px; /* Espaçamento entre o input e o botão */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: flex-end; /* Alinha o grupo à direita */
+}
+
+/* Estilo para o container do botão de envio */
+.botao-enviar {
+    width: 100%; /* Largura total */
+    margin-top: 20px; /* Margem superior */
+    display: flex; /* Flexbox para centralizar */
+    justify-content: center; /* Centraliza o botão */
+}
+
+/* Estilo para o botão de envio */
+button[type="submit"] {
+    width: 60%; /* Largura do botão */
+    padding: 12px; /* Espaçamento interno */
+    font-size: 1.2em; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background-color: #4ec7b0; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+    border-radius: 20px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Montserrat'; /* Fonte Montserrat */
+}
+
+.form-busca{
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+/* Estilo para o botão de busca de CEP */
+.buscar {
+    padding: 10px; /* Espaçamento interno */
+    font-size: 1em; /* Tamanho da fonte */
+    color: black; /* Cor do texto */
+    background-color: #ffd966; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-family: 'Montserrat'; /* Fonte Montserrat */
+}
+
+/* Estilo ao passar o mouse sobre o botão de envio */
+button[type="submit"]:hover {
+    background-color: #3aa894; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo ao passar o mouse sobre o botão de busca de CEP */
+.buscar:hover {
+    background-color: #f0c14b; /* Cor de fundo ao passar o mouse */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 150px;
+}
+
+footer a {
+    color: #4ec7b0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Boas-Vindas</title>
+    <link rel="stylesheet" href="/static/styles/inicio.css">
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav class="cabecalho">
+            <div class="margem">
+
+            </div>
+            <h1>Bem Vindo, {{ nome_usuario }}!</h1>
+            <div class="perfil">
+                <div class="foto_de_perfil" tabindex="0">
+                    <img src="/static/assets/{{ foto_perfil }}" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>{{ nome_usuario }}</li>
+                        <li><a href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="trabalho-secao">
+            <h2>O que deseja fazer?</h2>
+            <div class="telas">
+                <div class="tela">
+                    <a href="/cliente"><div class="circulo" id="circulo1"></div></a>
+                    <a href="/cliente" class="botao">Cadastrar Clientes</a>
+                </div>
+                <div class="tela">
+                    <a href="/fornecedor"><div class="circulo" id="circulo2"></div></a>
+                    <a href="/fornecedor" class="botao">Cadastrar Fornecedores</a>
+                </div>
+                <div class="tela">
+                    <a href="/gerenciar_contas"><div class="circulo" id="circulo3"></div></a>
+                    <a href="/gerenciar_contas" class="botao">Gerenciar Usuários</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 - Empresa JJC | Todos os direitos reservados</p>
+            <p>Contato: contato@empresa.com | Redes sociais: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </footer>
+    </div>
+</body>
+</html>

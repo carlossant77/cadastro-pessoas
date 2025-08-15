@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/estiloEditar.css">
+</head>
+<body>
+    <nav>
+        <div class="navegacao">
+            <ul>
+                <li><a href="/inicio">Inicio</a></li>
+                <li><a href="/cliente">Cadastro</a></li>
+                <li><a href="/consulta_clientes">Consulta</a></li>
+            </ul>
+        </div>
+
+        <h1>Editar Cliente</h1>
+
+        <div class="perfil">
+            <div class="foto_de_perfil" tabindex="0">
+                <img src="/static/assets/{{ foto_perfil }}" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>{{ nome_usuario }}</li>
+                    <li><a href="/logout">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="formulario">
+        <form method="POST" action="/editar_cliente/{{ cliente[0] }}">
+            <div class="informacoes">
+                <div>
+                    <label for="nome">nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" value="{{ cliente[1] }}">
+                </div>
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" value="{{ cliente[2] }}">
+                </div>
+                <div>
+                    <label for="telefone">telefone</label>
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" value="{{ cliente[3] }}">
+                </div>
+                <div>
+                    <label for="data">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF" value="{{ cliente[4] }}">
+                </div>
+                <div>
+                    <label for="rua">rua</label>
+                    <input type="text" name="rua" id="rua" placeholder="Rua" value="{{ cliente[6] }}">
+                </div>
+                <div>
+                    <label for="numero">numero</label>
+                    <input type="text" name="numero" id="numero" placeholder="Número" value="{{ cliente[7] }}">
+                </div>
+                <div>
+                    <label for="cidade">cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" value="{{ cliente[8] }}">
+                </div>
+                <div>
+                    <label for="estado">estado</label>
+                    <input type="text" name="cep" id="cep" placeholder="CEP" value="{{ cliente[9] }}">
+                </div>
+                <div>
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" placeholder="CEP" value="{{ cliente[10] }}">
+                </div>
+                
+                <div class="botoes">
+                    <button type="submit" class="editar">Salvar Alterações</button>
+                </div>
+            </div>
+        </form>
+        
+        <form method="POST" action="/excluir_cliente/{{ cliente[0] }}">
+            <div class="botoes">
+                <button type="submit" class="excluir">Excluir Cliente</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reseta margens, paddings e configura o box-sizing para border-box em todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Define box-sizing como border-box */
+}
+
+/* Estilos para o corpo da página */
+body {
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    background-color: #4ec7b0; /* Define cor de fundo como verde claro */
+    font-family: 'Montserrat', sans-serif; /* Define fonte como Montserrat */
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    width: 100%; /* Largura total */
+    padding: 20px 0; /* Espaçamento interno acima e abaixo */
+    background-color: #48b5a0; /* Cor de fundo */
+    display: flex; /* Exibe como flexbox */
+    justify-content: space-between; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto */
+
+}
+
+/* Estilo para o título dentro do cabeçalho */
+nav h1 {
+    color: #fff; /* Cor do texto */
+    font-size: 3vw; /* Tamanho relativo à largura da viewport */
+    width: 33%;
+}
+
+.navegacao{
+    display: flex;
+    width: 33%;
+}
+.navegacao ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+
+.navegacao li {
+    position: relative;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+.navegacao li:hover > a {
+    color: #FFD700;
+}
+
+.navegacao ul:hover li {
+    display: block;
+}
+
+.perfil{
+    margin-right: 2%;
+    width: 31%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.foto_de_perfil {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Garante que a imagem não "vaze" */
+    border-radius: 50%; /* Aplica o formato circular */
+    cursor: pointer;
+}
+
+.menu {
+    display: none; 
+    position: absolute; 
+    top: 13%; 
+    left: 91.5%;
+    max-width: 7vw;
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.menu ul {
+    text-decoration: none;  
+    list-style: none;
+}
+
+.menu ul li {
+    color: #000;
+}
+
+.perfil:focus-within .menu{
+    display: block;
+}
+
+.menu ul li a {
+    display: flex;
+    justify-self: left;
+}
+
+.foto_de_perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manteve a proporção da imagem */
+    border-radius: 50%;
+}
+
+.formulario{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    border: 2px solid black; /* Adiciona uma borda de 2px ao redor do formulário. */
+    border-radius: 30px; /* Define bordas arredondadas no formulário. */
+    background-color: white; /* Define o fundo do formulário como branco. */
+    width: 45%; /* Define a largura do formulário como 55%. */
+    height: 500px; /* Define a altura do formulário como 600px. */
+    display: flex; /* Usa o layout Flexbox dentro do formulário. */
+    flex-direction: column; /* Organiza os itens do formulário de forma vertical. */
+    align-items: center; /* Alinha os itens ao centro. */
+    margin-bottom: 20px; /* Aplica uma margem inferior de 20px. */
+}
+
+input[type="text"], input[type="password"] {
+    width: 60%; /* Define a largura dos campos de entrada como 60%. */
+    padding: 10px; /* Adiciona um preenchimento de 10px nos campos de entrada. */
+    border: 3px solid black; /* Define uma borda de 3px ao redor dos campos de entrada. */
+    border-radius: 20px; /* Arredonda as bordas dos campos de entrada. */
+    font-size: 20px; /* Define o tamanho da fonte nos campos de entrada. */
+    color: #333; /* Define a cor da fonte nos campos de entrada. */
+    background-color: #fff; /* Define o fundo dos campos de entrada como branco. */
+    font-family: 'Montserrat'; /* Define a fonte dos campos de entrada como "Montserrat". */
+    margin-bottom: 35px; /* Adiciona uma margem inferior de 35px aos campos de entrada. */
+}
+
+input[type="text"]:first-of-type{
+    margin-top: 50px;
+}
+
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    font-size: 20px; /* Define o tamanho da fonte dos placeholders. */
+    color: #bbb; /* Define a cor dos placeholders como cinza claro. */
+}
+
+.imagem_enviar {
+    display: flex; /* Usa o layout Flexbox para o botão de envio de imagem. */
+    align-items: center; /* Alinha os itens ao centro dentro do botão. */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão. */
+    width: 40%; /* Define a largura do botão como 40%. */
+    padding: 5px; /* Adiciona um preenchimento de 5px ao redor do conteúdo do botão. */
+    border: 3px solid black; /* Adiciona uma borda preta ao redor do botão. */
+    border-radius: 20px; /* Arredonda as bordas do botão. */
+    font-size: 20px; /* Define o tamanho da fonte do botão. */
+    color: #004aad; /* Define a cor do texto do botão. */
+    background-color: #fff; /* Define o fundo do botão como branco. */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse. */
+    font-family: 'Montserrat'; /* Define a fonte do botão como "Montserrat". */
+    text-decoration: underline; /* Adiciona um sublinhado ao texto do botão. */
+    margin-bottom: 35px; /* Adiciona uma margem inferior de 35px ao botão. */
+}
+
+.imagem_enviar .upload-icon {
+    margin-right: 20px; /* Adiciona uma margem à direita do ícone de upload. */
+    width: 35px; /* Define a largura do ícone de upload. */
+}
+
+.imagem_enviar:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo do botão para cinza claro ao passar o mouse. */
+}
+
+button {
+    width: 100%; /* Define a largura do botão como 100% do seu container pai. */
+    max-width: 200px; /* Define uma largura máxima de 200px para o botão. */
+    padding: 10px; /* Adiciona um preenchimento de 10px ao redor do conteúdo do botão. */
+    font-size: 16px; /* Define o tamanho da fonte do botão. */
+    color: #000000; /* Define a cor do texto do botão como preto. */
+    background-color: #4ec7b0; /* Define a cor de fundo do botão. */
+    border: none; /* Remove qualquer borda padrão do botão. */
+    border-radius: 20px; /* Arredonda as bordas do botão. */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse. */
+    font-family: 'Montserrat'; /* Define a fonte do botão como "Montserrat". */
+    font-size: 20px; /* Define o tamanho da fonte do botão. */
+}
+
+button:hover {
+    background-color: #3aa894; /* Altera a cor de fundo do botão quando o mouse passa sobre ele. */
+}

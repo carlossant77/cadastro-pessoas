@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Importa a fonte "Montserrat" do Google Fonts com pesos 400 (normal) e 700 (negrito). */
+
+* {
+    box-sizing: border-box; /* Define que o cálculo de largura e altura de todos os elementos incluirá a borda e o padding, evitando o overflow inesperado. */
+}
+
+body {
+    overflow: hidden; /* Impede que a página tenha barras de rolagem. */
+    margin: 0; /* Remove a margem padrão do body. */
+    padding: 0; /* Remove o preenchimento padrão do body. */
+    min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da tela. */
+    display: flex; /* Usa o modelo de layout Flexbox para o body. */
+    justify-content: center; /* Alinha os itens filhos do body horizontalmente ao centro. */
+    align-items: center; /* Alinha os itens filhos do body verticalmente ao centro. */
+    background: linear-gradient(to right, #4ec7b0 50%, white 50%); /* Define um gradiente de fundo que vai de #4ec7b0 para branco. */
+    font-family: 'Montserrat'; /* Define a fonte do body como "Montserrat". */
+}
+
+body::after {
+    content: ''; /* Cria um pseudo-elemento vazio após o conteúdo do body. */
+    position: fixed; /* Posiciona o pseudo-elemento de forma fixa na tela. */
+    left: 50%; /* Posiciona o pseudo-elemento no meio horizontalmente. */
+    top: 0; /* Posiciona o pseudo-elemento no topo da tela. */
+    bottom: 0; /* Define que o pseudo-elemento ocupará toda a altura da tela. */
+    width: 2px; /* Define a largura do pseudo-elemento como 2px. */
+    background-color: black; /* Define a cor de fundo do pseudo-elemento como preto. */
+}
+
+.tela_branca {
+    width: 50%; /* Define a largura do container "tela_branca" como 50% da largura da tela. */
+    height: 100%; /* Define a altura do container "tela_branca" como 100% da altura da tela. */
+    display: flex; /* Usa o layout Flexbox para o container. */
+    justify-content: center; /* Centraliza o conteúdo dentro do container horizontalmente. */
+}
+
+.tela_verde {
+    width: 50%; /* Define a largura do container "tela_verde" como 50% da largura da tela. */
+    height: 100%; /* Define a altura do container "tela_verde" como 100% da altura da tela. */
+    display: flex; /* Usa o layout Flexbox para o container. */
+    justify-content: center; /* Centraliza o conteúdo dentro do container horizontalmente. */
+}
+
+.input {
+    display: flex; /* Usa o layout Flexbox para o container de entrada. */
+    flex-direction: column; /* Organiza os itens verticalmente dentro do container. */
+    justify-content: center; /* Alinha os itens ao centro verticalmente. */
+    align-items: center; /* Alinha os itens ao centro horizontalmente. */
+    padding: 20px; /* Adiciona 20px de preenchimento ao redor do conteúdo. */
+    width: 100%; /* Define a largura do container de entrada como 100% do seu pai. */
+    max-width: 400px; /* Define a largura máxima do container de entrada como 400px. */
+    border: 2px solid black; /* Adiciona uma borda preta de 2px ao redor do container. */
+    border-radius: 30px; /* Define bordas arredondadas de 30px para o container. */
+    background-color: #f4f6fc; /* Define a cor de fundo do container como um tom claro de azul. */
+}
+
+form {
+    display: flex; /* Usa o layout Flexbox para o formulário. */
+    flex-direction: column; /* Organiza os itens do formulário verticalmente. */
+    align-items: center; /* Alinha os itens ao centro horizontalmente. */
+    justify-content: center; /* Alinha os itens ao centro verticalmente. */
+    gap: 15px; /* Define um espaçamento de 15px entre os itens do formulário. */
+}
+
+.user-icon {
+    font-size: 60px; /* Define o tamanho da fonte do ícone de usuário. */
+    color: #333; /* Define a cor do ícone como um tom de cinza escuro. */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%; /* Define que os campos de entrada ocuparão 100% da largura do seu container pai. */
+    padding: 12px; /* Adiciona um preenchimento de 12px ao redor dos campos de entrada. */
+    border: 3px solid #333; /* Adiciona uma borda de 3px com a cor #333 (cinza escuro). */
+    border-radius: 20px; /* Arredonda as bordas dos campos de entrada em 20px. */
+    font-size: 18px; /* Define o tamanho da fonte dos campos de entrada como 18px. */
+    color: #333; /* Define a cor da fonte nos campos de entrada como #333 (cinza escuro). */
+    background-color: #fff; /* Define o fundo dos campos de entrada como branco. */
+    font-family: 'Montserrat'; /* Define a fonte dos campos de entrada como "Montserrat". */
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    font-size: 18px; /* Define o tamanho da fonte dos placeholders como 18px. */
+    color: #bbb; /* Define a cor dos placeholders como um tom claro de cinza. */
+}
+
+button {
+    width: 100%; /* Define que o botão ocupará 100% da largura do seu container pai. */
+    max-width: 150px; /* Define a largura máxima do botão como 150px. */
+    padding: 10px; /* Adiciona um preenchimento de 10px ao redor do botão. */
+    font-size: 18px; /* Define o tamanho da fonte do botão como 18px. */
+    color: #000000; /* Define a cor do texto do botão como preto. */
+    background-color: #4ec7b0; /* Define a cor de fundo do botão como #4ec7b0 (um tom de verde claro). */
+    border: none; /* Remove qualquer borda padrão do botão. */
+    border-radius: 20px; /* Arredonda as bordas do botão em 20px. */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão. */
+    font-family: 'Montserrat'; /* Define a fonte do botão como "Montserrat". */
+}
+
+button:hover {
+    background-color: #3aa894; /* Altera a cor de fundo do botão quando o mouse passa sobre ele para um tom mais escuro de verde. */
+}
+
+.cadastro {
+    font-size: 20px; /* Define o tamanho da fonte do texto de cadastro como 20px. */
+    font-family: 'Montserrat'; /* Define a fonte do texto de cadastro como "Montserrat". */
+    color: #333; /* Define a cor do texto de cadastro como um tom de cinza escuro. */
+    margin-top: 10px; /* Adiciona uma margem superior de 10px ao texto de cadastro. */
+    text-align: center; /* Alinha o texto ao centro. */
+}
+
+.cadastro a {
+    color: #004aad; /* Define a cor dos links de cadastro como #004aad (um tom de azul). */
+}
+
+.cadastro a:hover {
+    text-decoration: underline; /* Adiciona um sublinhado ao link quando o mouse passa sobre ele. */
+}
+
+.seta {
+    margin-bottom: 850px; /* Adiciona uma margem inferior de 850px à seta (provavelmente usada para posicionar a seta para baixo). */
+    margin-left: 20px; /* Adiciona uma margem à esquerda de 20px à seta. */
+    width: 200px; /* Define a largura da seta como 200px. */
+    font-size: 50px; /* Define o tamanho da fonte da seta como 50px. */
+    color: black; /* Define a cor da seta como preta. */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar sobre a seta. */
+    transition: transform 0.3s ease, color 0.3s ease; /* Adiciona uma transição suave para mudanças na transformação e cor. */
+}
+
+.seta:hover {
+    color: #fff; /* Altera a cor da seta para branco quando o mouse passa sobre ela. */
+    transform: translateX(-5px); /* Move a seta 5px para a esquerda ao passar o mouse. */
+}
+
+.foto {
+    display: flex; /* Usa o layout Flexbox para o container de foto. */
+    justify-content: center; /* Centraliza a foto horizontalmente. */
+    align-items: center; /* Centraliza a foto verticalmente. */
+    padding: 20px; /* Adiciona 20px de preenchimento ao redor do conteúdo do container. */
+    width: 100%; /* Define que o container de foto ocupará 100% da largura do seu pai. */
+    max-width: 800px; /* Define a largura máxima do container de foto como 800px. */
+}

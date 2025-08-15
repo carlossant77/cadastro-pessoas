@@ -1,0 +1,221 @@
+/* Importa a fonte Montserrat de Google Fonts com pesos 400 e 700 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Remove margens e padding padrão, e define box-sizing para incluir padding e borda nas dimensões dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configura o corpo da página */
+body {
+    height: 100vh; /* Define a altura para preencher 100% da altura da viewport */
+    background: linear-gradient(135deg, #4ec7b0, #379e87); /* Gradiente de fundo diagonal */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte do corpo */
+    color: #fff; /* Define a cor do texto como branco */
+    overflow: hidden; /* Oculta o overflow (elementos que excedem o viewport) */
+}
+
+/* Configura a seção geral para layout flexível em coluna */
+.conteudoGeral {
+    display: flex; /* Define o display como flex */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    height: 100%; /* Define a altura como 100% do elemento pai */
+    justify-content: space-between; /* Distribui o espaço entre os elementos de forma equilibrada */
+}
+
+/* Define a largura da margem para 25% */
+.margem {
+    width: 25%; /* Define a largura da margem */
+}
+
+/* Configura o estilo do cabeçalho */
+.cabecalho {
+    height: 14%; /* Define a altura do cabeçalho */
+    display: flex; /* Alinha o conteúdo em linha */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: rgba(0, 0, 0, 0.1); /* Aplica um fundo preto semi-transparente */
+    padding: 0 20px; /* Adiciona padding horizontal */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+/* Define o estilo do título (h1) no cabeçalho */
+.cabecalho h1 {
+    display: flex; /* Define o display como flex */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    font-size: 36px; /* Define o tamanho da fonte */
+    width: 50%; /* Define a largura do h1 como 50% do elemento pai */
+}
+
+/* Define o estilo da seção de perfil */
+.perfil {
+    width: 25%; /* Define a largura da seção */
+    height: 100%; /* Define a altura */
+    display: flex; /* Define o display como flex */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: flex-end; /* Alinha os itens à direita */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Configura a foto de perfil */
+.foto_de_perfil {
+    width: 10vh; /* Define a largura com base na altura da viewport */
+    height: 10vh; /* Define a altura com base na altura da viewport */
+    display: flex; /* Define o display como flex */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    overflow: hidden; /* Oculta qualquer conteúdo excedente */
+    border-radius: 50%; /* Faz a borda arredondada para criar um círculo */
+    cursor: pointer; /* Define o cursor como ponteiro */
+}
+
+/* Configura o menu, inicialmente oculto */
+.menu {
+    display: none; /* Oculta o menu por padrão */
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 13%; /* Posiciona 13% a partir do topo */
+    left: 92.5%; /* Posiciona 92.5% a partir da esquerda */
+    max-width: 7vw; /* Define a largura máxima como 7% da largura da viewport */
+    background: #fff; /* Fundo branco */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Padding interno */
+}
+
+/* Remove a decoração do texto e estilo da lista */
+.menu ul {
+    text-decoration: none; /* Remove sublinhado */
+    list-style: none; /* Remove marcador da lista */
+}
+
+/* Define a cor dos itens da lista do menu */
+.menu ul li {
+    color: #000; /* Define a cor do texto como preto */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Exibe o menu quando o elemento perfil está em foco */
+.perfil:focus-within .menu {
+    display: block; /* Exibe o menu */
+}
+
+/* Configura a imagem dentro da foto de perfil */
+.foto_de_perfil img {
+    width: 100%; /* Define a largura da imagem para preencher o container */
+    height: 100%; /* Define a altura da imagem para preencher o container */
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+    border-radius: 50%; /* Borda arredondada para coincidir com o container */
+}
+
+/* Estiliza a imagem padrão do usuário */
+.user-img {
+    width: 50px; /* Largura da imagem do usuário */
+    height: 50px; /* Altura da imagem do usuário */
+    border-radius: 50%; /* Arredonda a borda */
+    object-fit: cover; /* Ajusta a imagem para cobrir o container */
+}
+
+/* Define o título da seção de trabalho */
+.trabalho-secao h2 {
+    text-align: center; /* Centraliza o texto */
+    font-size: 36px; /* Define o tamanho da fonte */
+    color: #fff; /* Cor do texto branco */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Aplica uma sombra ao texto */
+}
+
+/* Configura o layout das telas */
+.telas {
+    display: flex; /* Define o display como flex */
+    justify-content: space-around; /* Distribui os elementos com espaço ao redor */
+    align-items: center; /* Alinha os elementos no centro verticalmente */
+    padding: 20px; /* Padding interno */
+    gap: 10px; /* Espaço entre as telas */
+    margin-top: 40px; /* Margem acima das telas */
+}
+
+/* Estilo individual para cada tela */
+.tela {
+    display: flex; /* Define o display como flex */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos */
+}
+
+/* Define o estilo do círculo */
+.circulo {
+    height: 350px; /* Define a altura */
+    width: 350px; /* Define a largura */
+    border-radius: 50%; /* Faz a borda arredondada para criar um círculo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Aplica uma sombra */
+    cursor: pointer; /* Define o cursor como ponteiro */
+}
+
+/* Aumenta o círculo e intensifica a sombra ao passar o mouse */
+.circulo:hover {
+    transform: scale(1.1); /* Aumenta o círculo */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Intensifica a sombra */
+}
+
+/* Define imagem de fundo para o círculo #circulo1 */
+#circulo1 {
+    background-image: url('/static/assets/imagem.png'); /* Imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir o círculo */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* Define imagem de fundo para o círculo #circulo2 */
+#circulo2 {
+    background-image: url('/static/assets/Mulheres\ de\ negócios\ conversando\ perto\ da\ mesa\ durante\ uma\ pausa\ para\ o\ café\ no\ corredor\ de\ uma\ grande\ empresa.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#circulo3 {
+    background-image: url('/static/assets/gerenciarcontas.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estiliza o botão */
+.botao {
+    margin-top: 15px; /* Define a margem acima */
+    padding: 12px 30px; /* Padding interno */
+    font-size: 24px; /* Define o tamanho da fonte */
+    color: #4ec7b0; /* Cor do texto */
+    background-color: #fff; /* Cor de fundo */
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Borda arredondada */
+    text-decoration: none; /* Remove sublinhado */
+    text-align: center; /* Centraliza o texto */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aplica sombra */
+}
+
+/* Muda o fundo e a cor do texto ao passar o mouse */
+.botao:hover {
+    background-color: #c6db0d; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
+    padding: 10px 20px; /* Padding interno */
+    text-align: center; /* Centraliza o texto */
+    color: #fff; /* Define a cor do texto como branco */
+    font-size: 14px; /* Define o tamanho da fonte */
+}
+
+/* Define o estilo dos links no rodapé */
+footer a {
+    color: #4ec7b0; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Adiciona sublinhado aos links no rodapé ao passar o mouse */
+footer a:hover {
+    text-decoration: underline; /* Adiciona sublinhado */
+}

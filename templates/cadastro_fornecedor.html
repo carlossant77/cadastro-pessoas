@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/estiloFornecedor.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav>
+            <div class="navegacao">
+                <ul>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="#">Cadastro</a></li>
+                    <li><a href="/consulta_fornecedor">Consulta</a></li>
+                </ul>
+            </div>
+
+            <h1>Cadastre-se</h1>
+
+            <div class="perfil">
+                <div class="foto_de_perfil" tabindex="0">
+                    <img src="/static/assets/{{ foto_perfil }}" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>{{ nome_usuario }}</li>
+                        <li><a href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="formulario">
+                <div class="input">
+                    <div class="user-icon"> 
+                        <img src="/static/assets/documento.png" alt="User Icon" style="width: 80px;">
+                    </div>
+
+                    <div class="user-local">
+                        <img src="/static/assets/localizacao.png" alt="" height="75px" class="imagemCEP">
+                    </div>
+                   <!-- Formulário de Cadastro com Busca de Endereço -->
+                    <form action="/cadastrar_fornecedor" method="post" class="form-content">
+                        <!-- Seção Pessoal -->
+                        <div class="pessoal">
+                            <input type="text" name="nomef" id="nomef" placeholder="Nome">
+                            <input type="text" name="emailf" id="emailf" placeholder="Email">
+                            <input type="text" name="telefonef" id="telefonef" placeholder="Telefone">
+                            <input type="text" name="site" id="site" placeholder="Site">
+                            <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ">
+                        </div>
+                    
+                        <!-- Seção Endereço -->
+                        <div class="endereco">
+                            <input type="text" name="ruaf" id="ruaf" placeholder="Rua" value="{{ rua }}">
+                            <input type="text" name="numerof" id="numerof" placeholder="Número">
+                            <input type="text" name="cidadef" id="cidadef" placeholder="Cidade" value="{{ cidade }}">
+                            <input type="text" name="estadof" id="estadof" placeholder="Estado" value="{{ estado }}">
+                            <input type="text" name="cepf" id="cepf" placeholder="CEP" value="{{ cep }}">
+                        </div>
+                    
+                        <!-- Botão Enviar -->
+                        <div class="botao-enviar">
+                            <button type="submit">Enviar</button>
+                        </div>
+                        </form>
+                        <form action="/buscar_endereco" method="POST" class="form-busca">
+                            <input type="text" name="cep_busca" id="cep_busca" placeholder="CEP">
+                            <input type="hidden" value="cadastro_fornecedor.html" name="site_fonte">
+                            <input type="submit" value="Buscar Endereço" class="buscar">
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 - Empresa JJC | Todos os direitos reservados</p>
+            <p>Contato: contato@empresa.com | Redes sociais: <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+        </footer>
+    </div>
+</body>
+</html>

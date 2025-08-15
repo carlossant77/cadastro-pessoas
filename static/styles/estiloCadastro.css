@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* Importa a fonte "Montserrat" do Google Fonts com pesos 400 (normal) e 700 (negrito). */
+
+body {
+    overflow: hidden; /* Desativa a rolagem da página, impedindo que apareçam barras de rolagem. */
+    margin: 0; /* Remove a margem padrão do corpo da página. */
+    padding: 0; /* Remove o preenchimento padrão do corpo da página. */
+    height: 100vh; /* Define a altura do body para ocupar 100% da altura da tela. */
+    display: flex; /* Usa o modelo de layout Flexbox. */
+    justify-content: flex-start; /* Alinha os itens filhos do body à esquerda. */
+    align-items: center; /* Alinha os itens filhos do body verticalmente ao centro. */
+    background: linear-gradient(to right, #4ec7b0 50%, white 50%); /* Cria um fundo com um gradiente linear da cor #4ec7b0 para branco, dividindo ao meio. */
+    font-family: 'Montserrat'; /* Define a fonte do corpo como "Montserrat". */
+}
+
+body::after {
+    content: ''; /* Adiciona um conteúdo vazio após o conteúdo do body. */
+    position: fixed; /* Posiciona o pseudo-elemento fixo na tela. */
+    left: 50%; /* Coloca o pseudo-elemento no meio da tela horizontalmente. */
+    top: 0; /* Posiciona o pseudo-elemento no topo da tela. */
+    bottom: 0; /* Define que o pseudo-elemento se estenderá até a parte inferior da tela. */
+    width: 2px; /* Define a largura do pseudo-elemento como 2px. */
+    background-color: black; /* Define a cor de fundo do pseudo-elemento como preta. */
+}
+
+.conteudoGeral {
+    height: 100%; /* Define que o conteúdo geral ocupará toda a altura disponível. */
+    width: 100%; /* Define que o conteúdo geral ocupará toda a largura disponível. */
+}
+
+.conteudoGeral nav {
+    display: flex; /* Usa o layout Flexbox para o elemento de navegação. */
+    align-self: flex-start; /* Alinha o elemento de navegação ao topo do container. */
+    margin: 0px; /* Remove a margem ao redor do elemento de navegação. */
+    height: 10%; /* Define a altura do elemento de navegação como 10% da altura do seu pai. */
+    width: 100%; /* Define que o elemento de navegação ocupará toda a largura do seu pai. */
+}
+
+.telas {
+    display: flex; /* Usa o layout Flexbox para o container de telas. */
+    height: 100%; /* Define a altura do container de telas como 100%. */
+    width: 100%; /* Define a largura do container de telas como 100%. */
+}
+
+.seta {
+    margin-left: 50px; /* Adiciona uma margem à esquerda do ícone de seta. */
+    width: 200px; /* Define a largura da seta. */
+    font-size: 50px; /* Define o tamanho da fonte da seta. */
+    color: black; /* Define a cor do ícone da seta como preta. */
+    cursor: pointer; /* Altera o cursor para uma mão ao passar o mouse sobre a seta. */
+    transition: transform 0.3s ease, color 0.3s ease; /* Adiciona uma transição suave para transformação e cor. */
+}
+
+.seta:hover {
+    color: #fff; /* Altera a cor da seta para branco ao passar o mouse. */
+    transform: translateX(-5px); /* Move a seta para a esquerda ao passar o mouse. */
+}
+
+.seta-container {
+    display: flex; /* Usa o layout Flexbox para o container da seta. */
+    width: 50%; /* Define que o container da seta ocupará 50% da largura do seu pai. */
+}
+
+.seta-container a {
+    text-decoration: none; /* Remove o sublinhado de links dentro do container. */
+    width: 20%; /* Define a largura dos links como 20% da largura do container. */
+}
+
+p {
+    width: 60%; /* Define a largura do parágrafo como 60% da largura do seu pai. */
+    font-size: 20px; /* Define o tamanho da fonte do parágrafo. */
+    margin-left: auto; /* Aplica margem automática à esquerda para centralizar horizontalmente. */
+    margin-right: auto; /* Aplica margem automática à direita para centralizar horizontalmente. */
+    text-align: center; /* Alinha o texto ao centro. */
+}
+
+.margem {
+    width: 20%; /* Define a largura do elemento como 20%. */
+}
+
+.telaCadastro {
+    display: flex; /* Usa o layout Flexbox para a tela de cadastro. */
+    flex-direction: column; /* Organiza os itens dentro do container de forma vertical. */
+    align-items: center; /* Alinha os itens ao centro. */
+    width: 50%; /* Define a largura da tela de cadastro como 50%. */
+    height: 90%; /* Define a altura da tela de cadastro como 90%. */
+}
+
+.telaCadastro h1 {
+    color: #333333; /* Define a cor do título como um tom de cinza escuro. */
+    font-size: 40px; /* Define o tamanho da fonte do título. */
+    margin-top: -10px; /* Aplica uma margem negativa no topo para ajustar o posicionamento. */
+    font-family: 'Montserrat'; /* Define a fonte do título como "Montserrat". */
+}
+
+.telaImagem {
+    width: 50%; /* Define a largura da tela de imagem como 50%. */
+    height: 90%; /* Define a altura da tela de imagem como 90%. */
+    background-image: url(/static/assets/cadastro.png); /* Define a imagem de fundo como o arquivo especificado. */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita. */
+    background-position: center; /* Posiciona a imagem de fundo no centro. */
+}
+
+.telaCadastro form {
+    border: 2px solid black; /* Adiciona uma borda de 2px ao redor do formulário. */
+    border-radius: 30px; /* Define bordas arredondadas no formulário. */
+    background-color: white; /* Define o fundo do formulário como branco. */
+    width: 55%; /* Define a largura do formulário como 55%. */
+    height: 600px; /* Define a altura do formulário como 600px. */
+    display: flex; /* Usa o layout Flexbox dentro do formulário. */
+    flex-direction: column; /* Organiza os itens do formulário de forma vertical. */
+    align-items: center; /* Alinha os itens ao centro. */
+    margin-bottom: 20px; /* Aplica uma margem inferior de 20px. */
+}
+
+.imagemCadastro {
+    margin-bottom: 35px; /* Adiciona uma margem inferior de 35px à imagem de cadastro. */
+}
+
+input[type="text"], input[type="password"] {
+    width: 60%; /* Define a largura dos campos de entrada como 60%. */
+    padding: 10px; /* Adiciona um preenchimento de 10px nos campos de entrada. */
+    border: 3px solid black; /* Define uma borda de 3px ao redor dos campos de entrada. */
+    border-radius: 20px; /* Arredonda as bordas dos campos de entrada. */
+    font-size: 20px; /* Define o tamanho da fonte nos campos de entrada. */
+    color: #333; /* Define a cor da fonte nos campos de entrada. */
+    background-color: #fff; /* Define o fundo dos campos de entrada como branco. */
+    font-family: 'Montserrat'; /* Define a fonte dos campos de entrada como "Montserrat". */
+    margin-bottom: 35px; /* Adiciona uma margem inferior de 35px aos campos de entrada. */
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    font-size: 20px; /* Define o tamanho da fonte dos placeholders. */
+    color: #bbb; /* Define a cor dos placeholders como cinza claro. */
+}
+
+.imagem_enviar {
+    display: flex; /* Usa o layout Flexbox para o botão de envio de imagem. */
+    align-items: center; /* Alinha os itens ao centro dentro do botão. */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão. */
+    width: 40%; /* Define a largura do botão como 40%. */
+    padding: 5px; /* Adiciona um preenchimento de 5px ao redor do conteúdo do botão. */
+    border: 3px solid black; /* Adiciona uma borda preta ao redor do botão. */
+    border-radius: 20px; /* Arredonda as bordas do botão. */
+    font-size: 20px; /* Define o tamanho da fonte do botão. */
+    color: #004aad; /* Define a cor do texto do botão. */
+    background-color: #fff; /* Define o fundo do botão como branco. */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse. */
+    font-family: 'Montserrat'; /* Define a fonte do botão como "Montserrat". */
+    text-decoration: underline; /* Adiciona um sublinhado ao texto do botão. */
+    margin-bottom: 15px; /* Adiciona uma margem inferior de 35px ao botão. */
+}
+
+.imagem_enviar .upload-icon {
+    margin-right: 20px; /* Adiciona uma margem à direita do ícone de upload. */
+    width: 35px; /* Define a largura do ícone de upload. */
+}
+
+.imagem_enviar:hover {
+    background-color: #f0f0f0; /* Altera a cor de fundo do botão para cinza claro ao passar o mouse. */
+}
+
+button {
+    width: 100%; /* Define a largura do botão como 100% do seu container pai. */
+    max-width: 200px; /* Define uma largura máxima de 200px para o botão. */
+    padding: 10px; /* Adiciona um preenchimento de 10px ao redor do conteúdo do botão. */
+    font-size: 16px; /* Define o tamanho da fonte do botão. */
+    color: #000000; /* Define a cor do texto do botão como preto. */
+    background-color: #4ec7b0; /* Define a cor de fundo do botão. */
+    border: none; /* Remove qualquer borda padrão do botão. */
+    border-radius: 20px; /* Arredonda as bordas do botão. */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar o mouse. */
+    font-family: 'Montserrat'; /* Define a fonte do botão como "Montserrat". */
+    font-size: 20px; /* Define o tamanho da fonte do botão. */
+}
+
+button:hover {
+    background-color: #3aa894; /* Altera a cor de fundo do botão quando o mouse passa sobre ele. */
+}

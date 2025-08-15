@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/estiloEditar.css">
+</head>
+<body>
+    <nav>
+        <div class="navegacao">
+            <ul>
+                <li><a href="/inicio">Inicio</a></li>
+                <li><a href="/gerenciar_contas">Gerenciar Contas</a></li>
+            </ul>
+        </div>
+
+        <h1>Editar Contas</h1>
+
+        <div class="perfil">
+            <div class="foto_de_perfil" tabindex="0">
+                <img src="/static/assets/{{ foto_perfil }}" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>{{ nome_usuario }}</li>
+                    <li><a href="/logout">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="formulario">
+        <form method="POST" action="/editar_conta/{{ login[0] }}">
+            <div class="informacoes">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" value="{{ login[3] }}">
+                </div>
+                <div>
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuário" value="{{ login[1] }}">
+                </div>
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" value="{{ login[2] }}">
+                </div>
+                
+                <div class="botoes">
+                    <button type="submit" class="editar">Salvar Alterações</button>
+                </div>
+            </div>
+        </form>
+        
+        <form method="POST" action="/excluir_conta/{{ login[0] }}">
+            <div class="botoes">
+                <button type="submit" class="excluir">Excluir Conta</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

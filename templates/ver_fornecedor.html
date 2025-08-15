@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Fornecedor</title>
+    <link rel="stylesheet" href="/static/styles/estiloVerMais.css">
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav>
+            <div class="navegacao">
+                <ul>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/fornecedor">Cadastro</a></li>
+                    <li><a href="/consulta_fornecedor">Consulta</a></li>
+                </ul>
+            </div>
+
+            <h1>Detalhes do Fornecedor</h1>
+
+            <div class="perfil">
+                <div class="foto_de_perfil" tabindex="0">
+                    <img src="/static/assets/{{ foto_perfil }}" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>{{ nome_usuario }}</li>
+                        <li><a href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="exibicao">
+            <div class="detalhes-fornecedor">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <td>{{ fornecedor[1] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ fornecedor[2] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Telefone</th>
+                            <td>{{ fornecedor[3] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Site</th>
+                            <td>{{ fornecedor[4] }}</td>
+                        </tr>
+                        <tr>
+                            <th>CNPJ</th>
+                            <td>{{ fornecedor[5] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Data de Cadastro</th>
+                            <td>{{ fornecedor[6] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Rua</th>
+                            <td>{{ fornecedor[7] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Número</th>
+                            <td>{{ fornecedor[8] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Cidade</th>
+                            <td>{{ fornecedor[9] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Estado</th>
+                            <td>{{ fornecedor[10] }}</td>
+                        </tr>
+                        <tr>
+                            <th>CEP</th>
+                            <td>{{ fornecedor[11] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

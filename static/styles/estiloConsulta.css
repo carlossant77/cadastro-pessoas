@@ -1,0 +1,209 @@
+/* Importa a fonte Montserrat do Google Fonts com pesos de 400 e 700 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos para o corpo da página */
+body {
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    height: 100vh; /* Define altura da página em 100% da altura da tela */
+    display: flex; /* Aplica display flex */
+    justify-content: flex-start; /* Alinha conteúdo no início horizontalmente */
+    align-items: center; /* Centraliza conteúdo verticalmente */
+    background-color: #4ec7b0; /* Define cor de fundo */
+    font-family: 'Montserrat'; /* Define a fonte Montserrat */
+}
+
+/* Classe para o conteúdo geral */
+.conteudoGeral {
+    height: 100%; /* Define a altura como 100% do elemento pai */
+    width: 100%; /* Define a largura como 100% do elemento pai */
+}
+
+/* Estilos para o cabeçalho */
+.cabecalho {
+    height: 14%; /* Define a altura como 14% da altura total */
+    width: 100%; /* Define a largura como 100% */
+    display: flex; /* Aplica display flex */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: flex-start; /* Alinha conteúdo no início horizontalmente */
+    background-color: #48b5a0; /* Define a cor de fundo */
+}
+
+.navegacao{
+    width: 34%;
+}
+/* Estilos para a lista de navegação */
+.navegacao ul {
+    display: flex; /* Aplica display flex */
+    justify-content: flex-start; /* Centraliza o conteúdo horizontalmente */
+    margin-left: -40px;
+    gap: 40px; /* Define um espaço de 40px entre os itens */
+    list-style: none; /* Remove a lista com marcadores */
+}
+
+/* Estilos para os itens da lista de navegação */
+.navegacao li {
+    position: relative; /* Define a posição relativa, útil para o hover */
+}
+
+/* Estilos para os links de navegação */
+.navegacao a {
+    text-decoration: none; /* Remove a sublinhado */
+    color: white; /* Define a cor do texto como branco */
+    font-size: 24px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 10px; /* Adiciona espaçamento interno */
+    display: block; /* Define o link como um bloco */
+}
+
+/* Estilo para o link ao passar o mouse (hover) */
+.navegacao li:hover > a {
+    color: #FFD700; /* Muda a cor do texto para dourado */
+}
+
+/* Estilo para exibir os itens da lista quando o mouse estiver sobre a lista */
+.navegacao ul:hover li {
+    display: block; /* Garante que os itens da lista fiquem visíveis */
+}
+
+/* Estilos para o título principal */
+h1 {
+    color: white;
+    display: flex; /* Aplica display flex */
+    justify-content: center; /* Centraliza o título */
+    font-family: 'Montserrat'; /* Define a fonte */
+    font-size: 45px; /* Define o tamanho da fonte */
+}
+
+.margem{
+    width: 41%;
+}
+
+.perfil{
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.foto_de_perfil {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Garante que a imagem não "vaze" */
+    border-radius: 50%; /* Aplica o formato circular */
+    cursor: pointer;
+}
+
+.menu {
+    display: none; 
+    position: absolute; 
+    top: 13%; 
+    left: 91%;
+    max-width: 7vw;
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.menu ul {
+    text-decoration: none;  
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu ul li {
+    color: #000;
+    text-decoration: none;
+}
+
+.perfil:focus-within .menu{
+    display: block;
+}
+
+.foto_de_perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manteve a proporção da imagem */
+    border-radius: 50%;
+}
+/* Estilos para a seção de exibição */
+.exibicao {
+    display: flex; /* Aplica display flex */
+    justify-content: center; /* Centraliza o conteúdo */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza os itens na coluna */
+    margin-top: 60px; /* Adiciona uma margem superior */
+}
+
+/* Estilos para a tabela */
+.tabela {
+    width: 80%; /* Define a largura como 80% */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+    padding: 20px; /* Adiciona um preenchimento interno */
+    background-color: white; /* Define a cor de fundo */
+    border-radius: 15px; /* Arredonda os cantos */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor */
+}
+
+/* Define a largura total para a tabela interna */
+table {
+    width: 100%;
+}
+
+/* Estilos para cabeçalhos da tabela */
+thead th {
+    background-color: #48b5a0; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    padding: 15px; /* Adiciona um preenchimento interno */
+    font-size: 24px; /* Define o tamanho da fonte */
+}
+
+/* Estilo para as linhas pares do corpo da tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Define uma cor de fundo clara */
+}
+
+/* Estilos gerais para as células da tabela */
+td, th {
+    padding: 20px; /* Adiciona um preenchimento interno */
+    border-bottom: 2px solid #ddd; /* Define borda inferior */
+    border-right: 2px solid #ddd; /* Define borda direita */
+    font-family: 'Montserrat'; /* Define a fonte */
+}
+
+/* Estilos para o botão "ver mais" */
+.verMais {
+    background-color: #48b5a0; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    padding: 5px 10px; /* Adiciona preenchimento interno */
+    border-radius: 5px; /* Arredonda os cantos */
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    display: inline-block; /* Define como bloco inline */
+}
+
+/* Estilo do botão "ver mais" ao passar o mouse */
+.verMais:hover {
+    background-color: #4ec7b0; /* Muda a cor de fundo */
+}
+
+.opcoes {
+    display: flex; /* Usa o layout Flexbox para o botão de opções. */
+    align-items: center; /* Alinha os itens ao centro dentro do botão. */
+    justify-content: space-evenly;
+}
+/* Estilos para as imagens dentro das células da tabela */
+td img {
+    height: 50px; /* Define a altura da imagem */
+    width: auto; /* Define a largura automática para manter proporção */
+    vertical-align: middle; /* Alinha a imagem verticalmente ao meio */
+}

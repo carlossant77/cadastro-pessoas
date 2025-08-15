@@ -1,0 +1,85 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Cliente</title>
+    <link rel="stylesheet" href="/static/styles/estiloVerMais1.css">
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav>
+            <div class="navegacao">
+                <ul>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/cliente">Cadastro</a></li>
+                    <li><a href="/consulta_clientes">Consulta</a></li>
+                </ul>
+            </div>
+    
+            <h1>Detalhes do Cliente</h1>
+    
+            <div class="perfil">
+                <div class="foto_de_perfil" tabindex="0">
+                    <img src="/static/assets/{{ foto_perfil }}" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>{{ nome_usuario }}</li>
+                        <li><a href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Exibição das Informações do Cliente -->
+        <div class="exibicao">
+            <div class="detalhes-cliente">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Nome</th>
+                            <td>{{ cliente[1] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ cliente[2] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Telefone</th>
+                            <td>{{ cliente[3] }}</td>
+                        </tr>
+                        <tr>
+                            <th>CPF</th>
+                            <td>{{ cliente[4] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Data de Cadastro</th>
+                            <td>{{ cliente[5] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Rua</th>
+                            <td>{{ cliente[6] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Número</th>
+                            <td>{{ cliente[7] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Cidade</th>
+                            <td>{{ cliente[8] }}</td>
+                        </tr>
+                        <tr>
+                            <th>Estado</th>
+                            <td>{{ cliente[9] }}</td>
+                        </tr>
+                        <tr>
+                            <th>CEP</th>
+                            <td>{{ cliente[10] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

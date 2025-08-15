@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/estiloConta.css">
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav>
+            <div class="navegacao">
+                <ul>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/cadastrar_conta">Cadastrar Conta</a></li>
+                </ul>
+            </div>
+    
+            <h1>Cadastrar Conta</h1>
+    
+            <div class="perfil">
+                <div class="foto_de_perfil" tabindex="0">
+                    <img src="/static/assets/{{ foto_perfil }}" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>{{ nome_usuario }}</li>
+                        <li><a href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="formulario">
+            <form action="/cadastrar_conta" method="POST" enctype="multipart/form-data">
+                <input type="text" placeholder="Nome" name="nome" id="nome">
+                <input type="text" placeholder="Usuário" name="usuario" id="usuario">
+                <input type="password" placeholder="Senha" name="senha" id="senha">
+
+                   
+                <label class="imagem_enviar">
+                    <input type="file" id="imagem" name="imagem" hidden>
+                    <img src="/static/assets/upload-na-nuvem.png" alt="Upload" width="150px"  class="upload-icon">
+                    Carregar <br> Imagem
+                </label>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

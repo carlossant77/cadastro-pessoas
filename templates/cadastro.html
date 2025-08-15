@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/estiloCadastro.css">
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav>
+            <div class="seta-container">
+                <a href="/"><div class="seta">&larr;</div></a>
+                {% if erro %}
+                    <p style="color: red;">{{ erro }}</p>
+                {% endif %}
+                <div class="margem"></div>
+            </div>
+        </nav>
+        <div class="telas">
+            <div class="telaCadastro">
+                <h1>Cadastre-Se</h1>
+                <form action="/cadastrar" method="POST" enctype="multipart/form-data">
+                    <img src="/static/assets/‎imgCadastro.png" alt="" class="imagemCadastro">
+                    
+                    <input type="text" placeholder="Nome" name="nome" id="nome">
+                    <input type="text" placeholder="Usuário" name="usuario" id="usuario">
+                    <input type="password" placeholder="Senha" name="senha" id="senha">
+
+                   
+                    <label class="imagem_enviar">
+                        <input type="file" id="imagem" name="imagem" hidden>
+                        <img src="/static/assets/upload-na-nuvem.png" alt="Upload" width="150px"  class="upload-icon">
+                        Carregar <br> Imagem
+                    </label>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="telaImagem">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

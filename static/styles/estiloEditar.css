@@ -1,0 +1,243 @@
+/* Importa a fonte Montserrat do Google Fonts, com pesos 400 e 700 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reseta margens, paddings e configura o box-sizing para border-box em todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Define box-sizing como border-box */
+}
+
+/* Estilos para o corpo da página */
+body {
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    background-color: #4ec7b0; /* Define cor de fundo como verde claro */
+    font-family: 'Montserrat', sans-serif; /* Define fonte como Montserrat */
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    width: 100%; /* Largura total */
+    padding: 20px 0; /* Espaçamento interno acima e abaixo */
+    background-color: #48b5a0; /* Cor de fundo */
+    display: flex; /* Exibe como flexbox */
+    justify-content: space-between; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto */
+
+}
+
+/* Estilo para o título dentro do cabeçalho */
+nav h1 {
+    color: #fff; /* Cor do texto */
+    font-size: 3vw; /* Tamanho relativo à largura da viewport */
+    width: 33%;
+}
+
+.navegacao{
+    display: flex;
+    width: 33%;
+}
+.navegacao ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+
+.navegacao li {
+    position: relative;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+.navegacao li:hover > a {
+    color: #FFD700;
+}
+
+.navegacao ul:hover li {
+    display: block;
+}
+
+.perfil{
+    margin-right: 2%;
+    width: 31%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.foto_de_perfil {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Garante que a imagem não "vaze" */
+    border-radius: 50%; /* Aplica o formato circular */
+    cursor: pointer;
+}
+
+.menu {
+    display: none; 
+    position: absolute; 
+    top: 13%; 
+    left: 91.5%;
+    max-width: 7vw;
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.menu ul {
+    text-decoration: none;  
+    list-style: none;
+}
+
+.menu ul li {
+    color: #000;
+}
+
+.perfil:focus-within .menu{
+    display: block;
+}
+
+.menu ul li a {
+    display: flex;
+    justify-self: left;
+}
+
+.foto_de_perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manteve a proporção da imagem */
+    border-radius: 50%;
+}
+
+/* Estilos para o contêiner do formulário */
+.formulario {
+    display: flex; /* Define como flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os elementos */
+    border: 2px solid black; /* Define uma borda preta */
+    border-radius: 40px; /* Arredonda os cantos */
+    background-color: #f4f6fc; /* Define cor de fundo clara */
+    width: 900px; /* Largura do formulário */
+    padding: 40px; /* Espaçamento interno do formulário */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    margin: auto; /* Centraliza o formulário horizontalmente */
+    margin-top: 30px; /* Espaço acima do formulário */
+}
+
+/* Estilos para a seção de informações dentro do formulário */
+.informacoes {
+    display: grid; /* Define como grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria três colunas de tamanho igual */
+    gap: 25px; /* Espaçamento entre os campos */
+    width: 100%; /* Largura total da seção */
+}
+
+label {
+    width: 100%;
+    margin-left: 5%;
+    font-size: 24px; /* Tamanho da fonte aumentado */
+    justify-self: center;
+}
+
+/* Estilos para cada campo do formulário */
+
+/* Estilos para os campos de entrada de dados */
+input {
+    width: 100%; /* Largura total para o campo de entrada */
+    padding: 12px; /* Espaçamento interno do campo */
+    border: 2px solid black; /* Borda preta */
+    border-radius: 20px; /* Arredonda os cantos */
+    font-size: 26px; /* Tamanho da fonte do campo */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    color: black; /* Cor do texto no campo */
+    margin-top: 10px; /* Espaçamento acima do campo */
+}
+
+/* Estilos para a seção de imagem */
+.imagem {
+    grid-column: span 3; /* Ocupa todas as três colunas */
+    display: flex; /* Define como flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens */
+    margin-top: 30px; /* Espaço acima da seção de imagem */
+}
+
+/* Estilos para o ícone de imagem */
+.imagem .icone {
+    width: 100px; /* Largura do ícone */
+    height: 100px; /* Altura do ícone */
+    border: 2px solid black; /* Borda preta */
+    border-radius: 50%; /* Formato circular */
+    margin-bottom: 15px; /* Espaço abaixo do ícone */
+    background-color: #fff; /* Cor de fundo branca */
+    font-size: 48px; /* Tamanho da fonte do emoji */
+    display: flex; /* Define como flexbox */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilos para o botão de edição de imagem */
+.imagem button {
+    background-color: #4ec7b0; /* Cor de fundo verde */
+    color: white; /* Cor do texto em branco */
+    border: none; /* Remove borda */
+    padding: 15px 25px; /* Tamanho do botão */
+    border-radius: 20px; /* Arredonda os cantos do botão */
+    font-size: 18px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor em formato de ponteiro */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Cor do botão de edição de imagem ao passar o mouse */
+.imagem button:hover {
+    background-color: #3ca391; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o contêiner dos botões de ação */
+.botoes {
+    grid-column: span 3; /* Ocupa todas as três colunas */
+    display: flex; /* Define como flexbox */
+    gap: 30px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões */
+    margin-top: 30px; /* Espaço acima dos botões */
+}
+
+/* Estilos para os botões de editar e excluir */
+.botoes .editar, .botoes .excluir {
+    background-color: #4ec7b0; /* Cor de fundo verde */
+    color: white; /* Cor do texto em branco */
+    border: none; /* Remove borda */
+    padding: 15px 40px; /* Tamanho dos botões */
+    border-radius: 20px; /* Arredonda os cantos dos botões */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 18px; /* Tamanho da fonte dos botões */
+    cursor: pointer; /* Cursor em formato de ponteiro */
+}
+
+/* Cor dos botões de editar e excluir ao passar o mouse */
+.botoes .editar:hover, .botoes .excluir:hover {
+    background-color: #3ca391; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.icone{
+    background-image: url(/static/assets/editar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

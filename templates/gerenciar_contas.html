@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/gerenciar_contas.css">
+</head>
+<body>
+    <div class="conteudoGeral">
+        <nav>
+            <div class="navegacao">
+                <ul>
+                    <li><a href="/inicio">Inicio</a></li>
+                    <li><a href="/cadastrar_conta">Cadastrar Conta</a></li>
+                </ul>
+            </div>
+    
+            <h1>Gerenciar Contas</h1>
+    
+            <div class="perfil">
+                <div class="foto_de_perfil" tabindex="0">
+                    <img src="/static/assets/{{ foto_perfil }}" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>{{ nome_usuario }}</li>
+                        <li><a href="/logout">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="tela">
+            <div class="tabela">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nome</th>
+                            <th>Usuário</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for usuario in usuarios %}
+                        <tr>
+                            <td><img src="/static/assets/{{ usuario[4] }}" alt="" class="foto_usuario"></td>
+                            <td>{{ usuario[3] }}</td>
+                            <td>{{ usuario[1] }}</td>
+                            <td>
+                                <div class="opcoes">
+                                    <a href="/editar_conta/{{ usuario[0] }}"><img src="/static/assets/editar.png" alt=""></a>
+                                    <a href="/excluir_conta/{{ usuario[0] }}"><img src="/static/assets/excluir.png" alt=""></a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

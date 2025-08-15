@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos gerais para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #4ec7b0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Conteúdo geral */
+.conteudoGeral {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    width: 100%; /* Largura total */
+    background-color: #48b5a0; /* Cor de fundo */
+    display: flex; /* Exibe como flexbox */
+    justify-content: space-between; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto */
+
+}
+
+/* Estilo para o título dentro do cabeçalho */
+nav h1 {
+    color: #fff; /* Cor do texto */
+    font-size: 2.5vw; /* Tamanho relativo à largura da viewport */
+    width: 33%;
+}
+
+.navegacao{
+    display: flex;
+    width: 33%;
+}
+.navegacao ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    list-style: none;
+}
+
+.navegacao li {
+    position: relative;
+}
+
+.navegacao a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+.navegacao li:hover > a {
+    color: #FFD700;
+}
+
+.navegacao ul:hover li {
+    display: block;
+}
+
+.perfil{
+    margin-right: 2%;
+    width: 31%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.foto_de_perfil {
+    width: 10vh;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Garante que a imagem não "vaze" */
+    border-radius: 50%; /* Aplica o formato circular */
+    cursor: pointer;
+}
+
+.menu {
+    display: none; 
+    position: absolute; 
+    top: 13%; 
+    left: 91.5%;
+    max-width: 7vw;
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.menu ul {
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    text-align: left; /* Garante alinhamento à esquerda */
+    list-style: none; /* Remove os marcadores */
+}
+
+.menu ul li {
+    text-align: left; /* Alinha o texto dos itens à esquerda */
+    margin: 5px 0; /* Espaço vertical entre os itens */
+    color: black;
+}
+
+.perfil:focus-within .menu{
+    display: block;
+}
+
+.menu ul li a {
+    display: flex;
+    justify-self: left;
+}
+
+.foto_de_perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Manteve a proporção da imagem */
+    border-radius: 50%;
+}
+
+/* Exibição dos detalhes do fornecedor */
+.exibicao {
+    width: 80%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalhes-fornecedor {
+    width: 50%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #48b5a0;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Estilo para a linha do cabeçalho da tabela */
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilo das células da tabela */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para os botões de navegação (editar, excluir) */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.editar, .excluir {
+    background-color: #48b5a0;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editar:hover, .excluir:hover {
+    background-color: #4ec7b0;
+}
