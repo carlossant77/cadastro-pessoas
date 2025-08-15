@@ -528,5 +528,6 @@ def cadastrar_conta():
 
     return render_template('cadastrar_conta.html', nome_usuario=nome_usuario, foto_perfil=foto_perfil)
 
-app.run(host='127.0.0.1', port=80, debug=True)
+app.run(host='0.0.0.0', port=80, debug=True)
+
 
